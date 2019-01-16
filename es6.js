@@ -85,8 +85,31 @@ const myConcat = (arr1, arr2) => {
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
 const squareList = arr => {
   "use strict";
-  const squaredIntegers = arr;
+  const squaredIntegers = arr
+    .filter(num => num > 0 && num % parseInt(num) === 0)
+    .map(num => Math.pow(num, 2));
   return squaredIntegers;
 };
 const squaredIntegers = squareList(realNumberArray);
-console.log(squaredIntegers);
+// console.log(squaredIntegers);
+
+//ES6: Set Default Parameters for Your Functions
+const inscrement = (function() {
+  "use strict";
+  return function inscrement(number, value = 1) {
+    return number + value;
+  };
+})();
+// console.log(inscrement(5, 2));
+// console.log(inscrement(5));
+
+//ES6: Use the Rest Operator with Function Parameters
+const sum = (function() {
+  "use strict";
+  return function sum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3));
+
+/*D17 100DaysOfCode & D14 301DaysOfCode */
