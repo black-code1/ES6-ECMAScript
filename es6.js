@@ -79,7 +79,7 @@ const myConcat = (arr1, arr2) => {
 };
 // console.log(myConcat([1, 2], [3, 4, 5]));
 
-/*D16 100DaysOfCode & D14 301DaysOfCode */
+/*D16 100DaysOfCode & D15 301DaysOfCode */
 
 //ES6: Write Higher Order Arrow Functions(map(),filter(),reduce())
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
@@ -112,4 +112,4 @@ const sum = (function() {
 })();
 console.log(sum(1, 2, 3));
 
-/*D17 100DaysOfCode & D14 301DaysOfCode */
+/*D17 100DaysOfCode & D16 301DaysOfCode */
