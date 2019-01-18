@@ -110,6 +110,60 @@ const sum = (function() {
     return args.reduce((a, b) => a + b, 0);
   };
 })();
-console.log(sum(1, 2, 3));
+// console.log(sum(1, 2, 3));
 
 /*D17 100DaysOfCode & D16 301DaysOfCode */
+
+// Revising arrow Function
+
+/*D18 100DaysOfCode & D17 301DaysOfCode */
+
+// ES6: Use the Spread Operator to Evaluate Arrays In-Place
+const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+let arr2;
+(function() {
+  "use strict";
+  arr2 = [...arr1];
+})();
+// console.log(arr2);
+
+// ES6: Use Destructing Assignment to Assign Variables from Objects
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+  const { tomorrow: tempOfTomorrow } = avgTemperatures;
+  return tempOfTomorrow;
+}
+
+// console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+// ES6: Use Destructing Assignment to Assign Variables from Nested Objects
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  const {
+    tomorrow: { max: maxOfTomorrow }
+  } = forecast;
+  return maxOfTomorrow;
+}
+// console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+/*D19 100DaysOfCode & D18 301DaysOfCode */
+
+// ES6:Use Destructing Assignment to Assign Variables from Arrays
+let a = 8,
+  b = 6;
+(() => {
+  "use strict";
+
+})();
+console.log(a);
+console.log(b);
