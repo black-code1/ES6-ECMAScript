@@ -213,6 +213,91 @@ function makeList(arr) {
   return resultDisplayArray;
 }
 const resultDisplayArray = makeList(result.failure);
-console.log(resultDisplayArray);
+// console.log(resultDisplayArray);
 
 /*D20 100DaysOfCode & D19 301DaysOfCode */
+
+// ES6:Write Concise Object Litlle Declaration Using Simple Fields
+const createPerson = (name, age, gender) => {
+  "use strict";
+  return { name, age, gender };
+};
+// console.log(createPerson("Zodiac Hasbro", 56, "male"));
+
+// ES6:Write Concise Declarative Functions with ES6
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }
+};
+bicycle.setGear(3);
+// console.log(bicycle.gear);
+
+// ES6:Use class Syntax to Define a Constructor Function
+function makeClass() {
+  "use strict";
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+// console.log(carrot.name);
+
+// ES6:Use getters and setters to Control Access to an Object
+function makeClass() {
+  "use strict";
+  class Thermostat {
+    constructor(Fahrenheit) {
+      this.Fahrenheit = Fahrenheit;
+    }
+    get temperature() {
+      return (5 / 9) * (this.Fahrenheit - 32);
+    }
+
+    set temperature(celcius) {
+      this.Fahrenheit = (celcius * 9.0) / 5 + 32;
+    }
+  }
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+// console.log(temp);
+
+// ES6:Understand the Differences Betwwen import and require
+// ("use strict");
+// import { capitalizeString } from "es6";
+// capitalizeString("hello!");
+
+// ES6:Use export to Reuse a Code Block
+// ("use strict");
+// export const foo = "bar";
+// export const bar = "foo";
+
+// ES6:Use * to Import Everything from a File
+// ("use strict");
+// import * as objectString from "capitalize_strings";
+
+// ES6:Create an Export Fallback with export default
+// ("use strict");
+// export default function substract(x, y) {
+//   return x - y;
+// }
+
+// ES6:Import a Default Export
+// ("use strict");
+// import substract from "math_functions";
+// substract(7, 4);
+
+/*D21 100DaysOfCode & D20 301DaysOfCode */
+
+// Regular Expressions: Using the Test Method
